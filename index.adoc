@@ -13,6 +13,9 @@
 
 // Include all parts of report.
 toc::[]
+
 include::webservice.adoc[]
+
 include::technologies.adoc[]
+
 include::annexes.adoc[]

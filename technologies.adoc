@@ -2,8 +2,8 @@
 :email: nic.gille@gmail.com
 :description: Présentation des technologies utilisés dans le projet
 :revdate: 03 janvier 2018
-:revnumber: 0.1
-:revremark: Ajout de Spring Boot, nv-i18n, JUnit, AssertJ et Given-When-Then.
+:revnumber: 0.2
+:revremark: Ajout des technologies supplémentaires Git et AsciiDoctor
 :lang: fr
 
 == Présentation des Techonologies du projet
@@ -29,9 +29,10 @@ disponibles dans les films ou encore les jeux vidéos gérés par la Médiathèq
 Cette librairie est disponible via le lien suivant : https://github.com/TakahikoKawasaki/nv-i18n
 
 === Technologies liées au Frontend
+// Vide pour le moment.
 
 === Technologies liées aux Tests
-=== Le framework JUnit5
+==== Le framework JUnit5
 JUnit est un framework de **test unitaire** pour le langage Java.
 Il est utilisé afin de tester de manière unitaire l'ensembles des services et classes
 développés dans le cadre du projet, afin de valider leurs bon fonctionnement avant
@@ -50,3 +51,18 @@ _Given-When-Then_ que l'on retrouve dans la rédaction de test unitaire.
 Cette librairie est ici utilisé afin de faciliter l'écriture et la compréhension des
 tests unitaires par une personne ayant une connaissance moins étendu du Java. +
 Cette librairie est disponible via le lien suivant : https://github.com/gabriel-deliu/given-when-then
+
+=== Technologies supplémentaires
+==== Le logiciel de versionning Git
+**Git** est un logiciel de versionning de code source.
+Il est utilisé dans le cadre du projet afin de pouvoir gérer plus facilement l'ensemble du code.
+De plus, via l'utilisation du **Git-Flow**, Git permet une gestion plus aisé du développement
+et de la correction des différentes _features_ via un ensemble de _branche_ dédié a une feature donnée.
+
+==== Le langage de présentation de document AsciiDoctor
+**L'AsciiDoctor** à été utilisé pour la rédaction du rapport du projet _Medialibs_.
+En effet, un rapport final est demandé afin de présenter le projet.
+Ainsi, plutôt que d'utiliser les outils classiques tels qu'un _traitement de texte_
+ou l'utilisation du langage _LaTeX_, j'ai pu découvrir l'AsciiDoctor, qui est une
+excellente alternative au LaTeX car plus simple à écrire, et davantage compréhensible
+pour un "non-information".
