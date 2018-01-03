@@ -1,0 +1,18 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Présentation des interfaces de services du projet Medialibs.
+:revdate: 03 janvier 2018
+:revnumber: 0.1
+:revremark: Présentation du services d'authentification.
+:lang: fr
+
+== Présentation des Interfaces de Services
+
+=== Présentation du service d'authentification
+.Route du service d'authentification
+[width="100%", options="header"]
+|======================================
+^| Méthode ^| URL       ^| Body ^| Description
+ | POST     | /auth      | User  | Permet de se connecter à l'application
+ | POST     | /register  | User  | Permet de s'inscrire sur à l'application avec un rôle d'utilisateur
+|======================================

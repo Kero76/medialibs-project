@@ -1,0 +1,10 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Annexes contenants les informations supplémentaires pour le rapport.
+:revdate: 03 janvier 2018
+:revnumber: 0.1
+:revremark: Présentation des auteurs du projet.
+:lang: fr
+
+== Auteurs
+* {author} <{email}>
