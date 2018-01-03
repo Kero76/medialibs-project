@@ -2,13 +2,14 @@
 :email: nic.gille@gmail.com
 :description: Rapport du projet de JEE
 :revdate: 03 janvier 2018
-:revnumber: 0.1
-:revremark: Initialise le rapport avec l'inclusion de la présentation des web services.
+:revnumber: 0.2
+:revremark: Ajout de la Table des Matières
 :lang: fr
 
 = Rapport du projet de JEE - Medialibs
 
-:toc: macro
+:toc: auto
+:toc-title: Table des Matières
 
 // Include all parts of report.
 toc::[]

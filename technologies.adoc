@@ -3,7 +3,50 @@
 :description: Présentation des technologies utilisés dans le projet
 :revdate: 03 janvier 2018
 :revnumber: 0.1
-:revremark: Ajout de Spring Boot.
+:revremark: Ajout de Spring Boot, nv-i18n, JUnit, AssertJ et Given-When-Then.
 :lang: fr
 
 == Présentation des Techonologies du projet
+=== Technologies liées au Backend
+==== Le framework Spring-Boot
+Le framework Spring-Boot est un framework développé en **Java** et ayant pour but de
+simplifier la réalisation d'application web en Java. +
+Etant une extension du célèbre **Spring Framework**, celui-ci ajoute un ensemble d'annotations
+facilitant la mise en place et la configuration parfois complexe qu'imposé Spring Framework.
+En sus de ceci, Spring-Boot possède un ensemble de plugin supplémentaire ajoutant
+de nouvelle fonctionnalités au _core_ initial du projet.
+On retrouvera par exemple dans le projet un module de gestion de la sécurité, ou
+encore de la manipulation de données via la présence de JPA et Hibernate.
+Vous trouverez plus d'information relative a Spring-Boot sur le site officiel : https://projects.spring.io/spring-boot/
+
+==== La librairie nv-i18n
+La librairie NV-I18N est une librairie facilitant la mise en place du respect
+de la norme **ISO 639-1**, qui permet une identification des pays par
+un couple de deux lettres. Par xemple, la France est représenter par le couple de lettre _fr_,
+tandis que les Etat-Unis sont représentés par les lettres _us_. +
+Cette librairie est utilisé dans l'optique de définir les langues et sous-titres
+disponibles dans les films ou encore les jeux vidéos gérés par la Médiathèque. +
+Cette librairie est disponible via le lien suivant : https://github.com/TakahikoKawasaki/nv-i18n
+
+=== Technologies liées au Frontend
+
+=== Technologies liées aux Tests
+=== Le framework JUnit5
+JUnit est un framework de **test unitaire** pour le langage Java.
+Il est utilisé afin de tester de manière unitaire l'ensembles des services et classes
+développés dans le cadre du projet, afin de valider leurs bon fonctionnement avant
+la mise en production de ces éléments. +
+Vous trouverez plus d'information sur ce framework a l'adresse suivante : http://junit.org/junit5/
+
+==== Le framework AssertJ
+Le framework **AssertJ** est un ensemble de classes et de méthodes facilitant le test
+de classe en Java.
+Ce framework, couplé à JUnit permet une rédaction plus rapide et plus concise des tests unitaires. +
+Cette librairie est disponible via le lien suivant : http://joel-costigliola.github.io/assertj/
+
+==== La librairie Given-When-Then
+La librairie **Given-When-Then** est une représentation basique du principe du
+_Given-When-Then_ que l'on retrouve dans la rédaction de test unitaire.
+Cette librairie est ici utilisé afin de faciliter l'écriture et la compréhension des
+tests unitaires par une personne ayant une connaissance moins étendu du Java. +
+Cette librairie est disponible via le lien suivant : https://github.com/gabriel-deliu/given-when-then
