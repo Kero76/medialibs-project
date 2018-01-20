@@ -1,0 +1,98 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Présentation des interfaces liés aux entreprises de la médiathèque.
+:revdate: 20 janvier 2018
+:revnumber: 0.1
+:revremark: Création du fichier + présentation des webservices.
+:lang: fr
+
+=== Présentation des services liés aux entreprises
+
+==== Présentation du service de gestion des Label Records
+.Service de gestion des labels records
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /label-records/
+| /
+| Récupération de la liste de tout les labels records enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de label records présent dans la médiathèque.
+
+| GET
+| /label-records/{id}
+| /
+| Récupération des informations d'un label records en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de label records ayant pour identifiant _id_.
+
+| GET
+| /label-records/{name}
+| /
+| Récupération des informations d'un label records en fonction de son _nom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de label records ayant pour nom _name_.
+|======================================
+
+
+==== Présentation du service de gestion des développeurs
+.Service de gestion des développeurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /developers/
+| /
+| Récupération de la liste de tout les développeurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de développeur présent dans la médiathèque.
+
+| GET
+| /developers/{id}
+| /
+| Récupération des informations d'un développeur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de développeur ayant pour identifiant _id_.
+
+| GET
+| /developers/{name}
+| /
+| Récupération des informations d'un développeur en fonction de son _nom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de développeur ayant pour nom _name_.
+|======================================
+
+
+==== Présentation du service de gestion des éditeurs
+.Service de gestion des éditeurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /publishers/
+| /
+| Récupération de la liste de tout les éditeurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'éditeurs présent dans la médiathèque.
+
+| GET
+| /publishers/{id}
+| /
+| Récupération des informations d'un éditeur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'éditeur ayant pour identifiant _id_.
+
+| GET
+| /publishers/{name}
+| /
+| Récupération des informations d'un éditeur en fonction de son _nom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'éditeurs ayant pour nom _name_.
+|======================================

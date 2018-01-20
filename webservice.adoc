@@ -2,8 +2,8 @@
 :email: nic.gille@gmail.com
 :description: Présentation des interfaces de services du projet Medialibs.
 :revdate: 20 janvier 2018
-:revnumber: 0.3
-:revremark: Ajout de la présentation des services liés aux médias.
+:revnumber: 0.4
+:revremark: Inclusions des services web liés aux entreprises et aux personnes.
 :lang: fr
 
 == Présentation des Interfaces de Services
@@ -520,3 +520,7 @@
 | Retourne la liste de tout les genres de série disponible dans la médiathèque.
 | Renvoie toujours un code _200_.
 |=================================
+
+include::webservices/persons.adoc[]
+
+include::webservices/companies.adoc[]

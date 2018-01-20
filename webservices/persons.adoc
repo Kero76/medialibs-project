@@ -1,0 +1,188 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Présentation des interfaces liés aux personnes de la médiathèque.
+:revdate: 20 janvier 2018
+:revnumber: 0.1
+:revremark: Création du fichier + présentation des webservices.
+:lang: fr
+
+=== Présentation des services liés aux personnes relatives aux médias
+
+==== Présentation du service de gestion des acteurs
+.Service de gestion des acteurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /actors/
+| /
+| Récupération de la liste de tout les acteurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'acteurs présent dans la médiathèque.
+
+| GET
+| /actors/{id}
+| /
+| Récupération des informations d'un acteur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'acteur ayant pour identifiant _id_.
+
+| GET
+| /actors?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un acteur en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'acteur ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
+
+
+==== Présentation du service de gestion des auteurs
+.Service de gestion des auteurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /authors/
+| /
+| Récupération de la liste de tout les auteurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'auteurs présent dans la médiathèque.
+
+| GET
+| /authors/{id}
+| /
+| Récupération des informations d'un auteur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'auteur ayant pour identifiant _id_.
+
+| GET
+| /authors?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un auteur en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'auteur ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
+
+
+==== Présentation du service de gestion des directeurs
+.Service de gestion des directeurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /directors/
+| /
+| Récupération de la liste de tout les directeurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence directeurs présent dans la médiathèque.
+
+| GET
+| /directors/{id}
+| /
+| Récupération des informations d'un directeur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence directeur ayant pour identifiant _id_.
+
+| GET
+| /directors?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un directeur en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence directeur ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
+
+
+==== Présentation du service de gestion des illustrateurs
+.Service de gestion des illustrateurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /illustrators/
+| /
+| Récupération de la liste de tout les illustrateurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'illustrateurs présent dans la médiathèque.
+
+| GET
+| /illustrators/{id}
+| /
+| Récupération des informations d'un illustrateur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'illustrateur ayant pour identifiant _id_.
+
+| GET
+| /illustrators?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un illustrateur en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'illustrateur ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
+
+
+==== Présentation du service de gestion des producteurs
+.Service de gestion des producteurs
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /producers/
+| /
+| Récupération de la liste de tout les producteurs enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de producteurs présent dans la médiathèque.
+
+| GET
+| /producers/{id}
+| /
+| Récupération des informations d'un producteur en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de producteur ayant pour identifiant _id_.
+
+| GET
+| /producers?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un producteur en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de producteur ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
+
+
+==== Présentation du service de gestion des chanteurs et groupes
+.Service de gestion des chanteurs et groupes
+[cols="1,2,1,4,4", width="100%", options="header"]
+|======================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /singers/
+| /
+| Récupération de la liste de tout les chanteurs et groupes enregistrés sur la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de chanteurs et/ou groupes présent dans la médiathèque.
+
+| GET
+| /singers/{id}
+| /
+| Récupération des informations d'un chanteur ou groupe en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de chanteur et/ou groupe ayant pour identifiant _id_.
+
+| GET
+| /singers?fname={fname}&lname={lname}
+| /
+| Récupération des informations d'un chanteur ou groupe en fonction de son _nom_ et son _prénom_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de chanteurs et/ou groupe ayant pour nom _lname_ et pour prénom _fname_.
+|======================================
