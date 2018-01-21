@@ -1,9 +1,9 @@
 :author: Nicolas GILLE
 :email: nic.gille@gmail.com
 :description: Présentation des interfaces liés aux personnes de la médiathèque.
-:revdate: 20 janvier 2018
-:revnumber: 0.1
-:revremark: Création du fichier + présentation des webservices.
+:revdate: 21 janvier 2018
+:revnumber: 0.1.1
+:revremark: Corrige les routes de recherche par prénom et nom des services.
 :lang: fr
 
 === Présentation des services liés aux personnes relatives aux médias
@@ -31,7 +31,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'acteur ayant pour identifiant _id_.
 
 | GET
-| /actors?fname={fname}&lname={lname}
+| /actors/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un acteur en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'acteur ayant pour nom _lname_ et pour prénom _fname_.
@@ -61,7 +61,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'auteur ayant pour identifiant _id_.
 
 | GET
-| /authors?fname={fname}&lname={lname}
+| /authors/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un auteur en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'auteur ayant pour nom _lname_ et pour prénom _fname_.
@@ -91,7 +91,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence directeur ayant pour identifiant _id_.
 
 | GET
-| /directors?fname={fname}&lname={lname}
+| /directors/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un directeur en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence directeur ayant pour nom _lname_ et pour prénom _fname_.
@@ -121,7 +121,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'illustrateur ayant pour identifiant _id_.
 
 | GET
-| /illustrators?fname={fname}&lname={lname}
+| /illustrators/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un illustrateur en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence d'illustrateur ayant pour nom _lname_ et pour prénom _fname_.
@@ -151,7 +151,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence de producteur ayant pour identifiant _id_.
 
 | GET
-| /producers?fname={fname}&lname={lname}
+| /producers/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un producteur en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence de producteur ayant pour nom _lname_ et pour prénom _fname_.
@@ -181,7 +181,7 @@
 | _200_ en cas de succès de la requête. _204_ en cas d'absence de chanteur et/ou groupe ayant pour identifiant _id_.
 
 | GET
-| /singers?fname={fname}&lname={lname}
+| /singers/search/?fname={fname}&lname={lname}
 | /
 | Récupération des informations d'un chanteur ou groupe en fonction de son _nom_ et son _prénom_.
 | _200_ en cas de succès de la requête. _204_ en cas d'absence de chanteurs et/ou groupe ayant pour nom _lname_ et pour prénom _fname_.
