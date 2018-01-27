@@ -46,6 +46,9 @@
         <assertj.version>3.9.0</assertj.version>
         <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+
+        <core.media.version>1.0</core.media.version>
+        <core.user.version>1.0</core.user.version>
     </properties>
 
     <!-- Dependencies -->
@@ -56,6 +59,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${springboot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>${core.media.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.user</artifactId>
+            <version>${core.user.version}</version>
+        </dependency>
+
 
         <!-- Database API -->
         <dependency>
@@ -82,11 +96,6 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>fr.nicolasgille.medialibs</groupId>
-            <artifactId>core.media</artifactId>
-            <version>1.0</version>
         </dependency>
     </dependencies>
 
