@@ -11,8 +11,18 @@
     </parent>
 
     <groupId>fr.nicolasgille.medialibs</groupId>
-    <artifactId>media-service</artifactId>
+    <artifactId>service.media</artifactId>
     <version>1.0</version>
 
-    
+    <properties>
+        <core.media.version>1.0</core.media.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>${core.media.version}</version>
+        </dependency>
+    </dependencies>
 </project>
