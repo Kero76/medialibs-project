@@ -42,9 +42,6 @@
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
 
-        <!-- Used to deploy on my personal maven repos-->
-        <myMavenRepo.read.url>https://mymavenrepo.com/repo/C7ATeK5khIoHXMfmyPUo/</myMavenRepo.read.url>
-
         <springboot.version>1.5.9.RELEASE</springboot.version>
         <assertj.version>3.9.0</assertj.version>
         <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
@@ -86,15 +83,12 @@
             <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
-
-    <!-- Private repository to get library of MediaLibs project. -->
-    <repositories>
-        <repository>
-            <id>myMavenRepo.read</id>
-            <url>${myMavenRepo.read.url}</url>
-        </repository>
-    </repositories>
 
     <!-- Build tasks -->
     <build>
