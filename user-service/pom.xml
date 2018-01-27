@@ -14,5 +14,15 @@
     <artifactId>user-service</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <core.user.version>1.0</core.user.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.user</artifactId>
+            <version>${core.user.version}</version>
+        </dependency>
+    </dependencies>
 </project>
