@@ -14,5 +14,21 @@
     <artifactId>stock-service</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <core.media.version>1.0</core.media.version>
+        <core.stock.version>1.0</core.stock.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>${core.media.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.stock</artifactId>
+            <version>${core.stock.version}</version>
+        </dependency>
+    </dependencies>
 </project>
