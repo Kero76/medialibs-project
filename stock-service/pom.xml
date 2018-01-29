@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.nicolasgille.medialibs</groupId>
+        <artifactId>service</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>fr.nicolasgille.medialibs</groupId>
+    <artifactId>stock-service</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <core.media.version>1.0</core.media.version>
+        <core.stock.version>1.0</core.stock.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>${core.media.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.stock</artifactId>
+            <version>${core.stock.version}</version>
+        </dependency>
+    </dependencies>
+</project>

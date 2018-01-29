@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fr.nicolasgille.medialibs</groupId>
+    <artifactId>service</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <developers>
+        <developer>
+            <name>Nicolas GILLE</name>
+            <email>nic.gille@gmail.com</email>
+            <roles>
+                <role>Developer</role>
+                <role>Tester</role>
+            </roles>
+            <url>http://nicolas-gille.fr</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <!-- Module definition -->
+    <modules>
+        <module>media-service</module>
+        <module>user-service</module>
+        <module>stock-service</module>
+        <module>loan-service</module>
+    </modules>
+
+    <!-- Properties definitions -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
+
+        <springboot.version>1.5.9.RELEASE</springboot.version>
+        <assertj.version>3.9.0</assertj.version>
+        <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+
+        <core.loan.version>1.0</core.loan.version>
+        <core.media.version>1.0</core.media.version>
+        <core.stock.version>1.0</core.stock.version>
+        <core.user.version>1.0</core.user.version>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Core API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.loan</artifactId>
+            <version>${core.loan.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.media</artifactId>
+            <version>${core.media.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.stock</artifactId>
+            <version>${core.stock.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.nicolasgille.medialibs</groupId>
+            <artifactId>core.user</artifactId>
+            <version>${core.user.version}</version>
+        </dependency>
+
+
+        <!-- Database API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Test API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${springboot.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build tasks -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${springboot.version}</version>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
