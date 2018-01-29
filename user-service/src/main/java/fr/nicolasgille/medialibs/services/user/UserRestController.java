@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package user;
+package fr.nicolasgille.medialibs.services.user;
 
 import fr.nicolasgille.medialibs.core.user.User;
 import fr.nicolasgille.medialibs.core.user.UserRepository;
