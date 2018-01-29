@@ -15,8 +15,8 @@
     <version>1.0</version>
 
     <properties>
-        <core.media.version>1.0</core.media.version>
-        <core.stock.version>1.0</core.stock.version>
+        <core.media.version>1.1-SNAPSHOT</core.media.version>
+        <core.stock.version>1.1-SNAPSHOT</core.stock.version>
     </properties>
 
     <dependencies>

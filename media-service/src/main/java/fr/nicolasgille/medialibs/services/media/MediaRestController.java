@@ -116,7 +116,10 @@ public class MediaRestController {
     public ResponseEntity<?> add(@RequestBody Media media, UriComponentsBuilder uriBuilder) {
         logger.info("Insert media {}", media);
 
-        // @Todo : Add method findByTitleAndReleaseDate to check presence of media before insertion and return CONFLICT error status.
+        if (this.mediaRepository.findByNameAndReleaseDate(media.getName(), media.getReleaseDate()) == null) {
+            logger.info("Media already found on system.");
+            return new ResponseEntity<Object>(HttpStatus.CONFLICT);
+        }
 
         this.mediaRepository.save(media);
         HttpHeaders header = new HttpHeaders();

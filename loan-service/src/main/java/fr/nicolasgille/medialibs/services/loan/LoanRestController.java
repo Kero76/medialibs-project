@@ -115,11 +115,15 @@ public class LoanRestController {
      * @since 1.0
      * @version 1.0
      */
-    @PostMapping("/")
+    @PostMapping(value = "/")
     public ResponseEntity<?> add(@RequestBody Loan loan, UriComponentsBuilder uriBuilder) {
         logger.info("Insert loan {}", loan);
 
         // @Todo : Add method findByUserIdOrMediaId, to check presence of user before insertion and return CONFLICT error status.
+        if (this.loanRepository.findByBorrowerIdAndMediaId(loan.getBorrowerId(), loan.getMediaId()) == null) {
+            logger.info("Loan already found on system");
+            return new ResponseEntity<Object>(HttpStatus.CONFLICT);
+        }
 
         HttpHeaders header = new HttpHeaders();
         this.loanRepository.save(loan);

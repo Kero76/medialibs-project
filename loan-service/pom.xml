@@ -15,9 +15,9 @@
     <version>1.0</version>
 
     <properties>
-        <core.loan.version>1.0</core.loan.version>
-        <core.media.version>1.0</core.media.version>
-        <core.user.version>1.0</core.user.version>
+        <core.loan.version>1.1-SNAPSHOT</core.loan.version>
+        <core.media.version>1.1-SNAPSHOT</core.media.version>
+        <core.user.version>1.1-SNAPSHOT</core.user.version>
     </properties>
 
     <dependencies>
