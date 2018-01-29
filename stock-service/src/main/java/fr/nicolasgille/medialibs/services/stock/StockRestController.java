@@ -16,7 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.nicolasgille.medialibs.services.stock;import fr.nicolasgille.medialibs.core.media.MediaRepository;
+package fr.nicolasgille.medialibs.services.stock;
+
+import fr.nicolasgille.medialibs.core.media.MediaRepository;
 import fr.nicolasgille.medialibs.core.stock.Stock;
 import fr.nicolasgille.medialibs.core.stock.StockRepository;
 import org.slf4j.Logger;
@@ -27,7 +29,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import fr.nicolasgille.medialibs.services.user.UserRestController;
 
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class StockRestController {
      *
      * @since 1.0
      */
-    private static final Logger logger = LoggerFactory.getLogger(UserRestController.class.getPackage().getName());
+    private static final Logger logger = LoggerFactory.getLogger(StockRestController.class.getPackage().getName());
 
     /**
      * Repository to manage entity on persistent system.
