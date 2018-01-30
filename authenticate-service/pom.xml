@@ -11,24 +11,18 @@
     </parent>
 
     <groupId>fr.nicolasgille.medialibs</groupId>
-    <artifactId>stock-service</artifactId>
-    <version>1.1</version>
+    <artifactId>authenticate-service</artifactId>
+    <version>1.0</version>
 
     <properties>
-        <core.media.version>1.1-SNAPSHOT</core.media.version>
-        <core.stock.version>1.1-SNAPSHOT</core.stock.version>
+        <core.user.version>1.1-SNAPSHOT</core.user.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>fr.nicolasgille.medialibs</groupId>
-            <artifactId>core.media</artifactId>
-            <version>${core.media.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.nicolasgille.medialibs</groupId>
-            <artifactId>core.stock</artifactId>
-            <version>${core.stock.version}</version>
+            <artifactId>core.user</artifactId>
+            <version>${core.user.version}</version>
         </dependency>
     </dependencies>
 </project>

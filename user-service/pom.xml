@@ -12,10 +12,10 @@
 
     <groupId>fr.nicolasgille.medialibs</groupId>
     <artifactId>user-service</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <properties>
-        <core.user.version>1.0</core.user.version>
+        <core.user.version>1.1-SNAPSHOT</core.user.version>
     </properties>
 
     <dependencies>

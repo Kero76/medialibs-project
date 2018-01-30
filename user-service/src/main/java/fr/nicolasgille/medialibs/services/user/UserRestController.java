@@ -114,7 +114,10 @@ public class UserRestController {
     public ResponseEntity<?> add(@RequestBody User user, UriComponentsBuilder uriBuilder) {
         logger.info("Insert user {}", user);
 
-        // @Todo : Add method findByEmail to check presence of user before insertion and return CONFLICT error status.
+        if (this.userRepository.findByEmail(user.getEmail()) == null) {
+            logger.info("User already found on system");
+            return new ResponseEntity<Object>(HttpStatus.CONFLICT);
+        }
 
         HttpHeaders header = new HttpHeaders();
         this.userRepository.save(user);

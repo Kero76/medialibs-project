@@ -18,7 +18,6 @@
 
 package fr.nicolasgille.medialibs.services.stock;
 
-import fr.nicolasgille.medialibs.core.media.MediaRepository;
 import fr.nicolasgille.medialibs.core.stock.Stock;
 import fr.nicolasgille.medialibs.core.stock.StockRepository;
 import org.slf4j.Logger;
@@ -55,8 +54,6 @@ public class StockRestController {
      */
     @Autowired
     private StockRepository stockRepository;
-    @Autowired
-    private MediaRepository mediaRepository;
 
 
     /**
@@ -118,7 +115,10 @@ public class StockRestController {
     public ResponseEntity<?> add(@RequestBody Stock stock, UriComponentsBuilder uriBuilder) {
         logger.info("Insert stock {}", stock);
 
-        // @Todo : Add method findByEmail to check presence of user before insertion and return CONFLICT error status.
+        if (this.stockRepository.findByMediaId(stock.getMediaId()) == null) {
+            logger.info("Stock already found on system.");
+            return new ResponseEntity<Object>(HttpStatus.CONFLICT);
+        }
 
         HttpHeaders header = new HttpHeaders();
         this.stockRepository.save(stock);
@@ -156,8 +156,7 @@ public class StockRestController {
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);
         }
 
-        // @Todo : Add specific method on Stock lib to check fastly if is fill
-        if (updateStock.getCurrentStock() + 1 > updateStock.getInitialStock()) {
+        if (updateStock.isFill()) {
             logger.info("Stock cannot be increment because the current stock is over the initial stock.");
             return new ResponseEntity<Object>(HttpStatus.METHOD_NOT_ALLOWED);
         }
@@ -204,8 +203,7 @@ public class StockRestController {
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);
         }
 
-        // @Todo : Add specific method on Stock lib to check fastly if is empty
-        if (updateStock.getCurrentStock() - 1 < 0) {
+        if (updateStock.isEmpty()) {
             logger.info("Stock cannot be decrement because the current stock is under zero.");
             return new ResponseEntity<Object>(HttpStatus.METHOD_NOT_ALLOWED);
         }
