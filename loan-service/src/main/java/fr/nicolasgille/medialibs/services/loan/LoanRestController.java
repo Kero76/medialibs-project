@@ -83,12 +83,12 @@ public class LoanRestController {
     }
 
     /**
-     * Get one loan from system.
+     * Get one authenticate from system.
      *
      * @param id
-     *  Identifier of requested loan.
+     *  Identifier of requested authenticate.
      * @return
-     *  A ResponseEntity with loan and/or http code status about error during process.
+     *  A ResponseEntity with authenticate and/or http code status about error during process.
      * @since 1.0
      * @version 1.0
      */
@@ -104,22 +104,26 @@ public class LoanRestController {
     }
 
     /**
-     * Add new loan on persistent system.
+     * Add new authenticate on persistent system.
      *
      * @param loan
      *  Loan to insert on system.
      * @param uriBuilder
-     *  Uri to redirect user on loan page after creation.
+     *  Uri to redirect user on authenticate page after creation.
      * @return
-     *  A ResponseEntity with loan and/or http code status about error during process.
+     *  A ResponseEntity with authenticate and/or http code status about error during process.
      * @since 1.0
      * @version 1.0
      */
-    @PostMapping("/")
+    @PostMapping(value = "/")
     public ResponseEntity<?> add(@RequestBody Loan loan, UriComponentsBuilder uriBuilder) {
-        logger.info("Insert loan {}", loan);
+        logger.info("Insert authenticate {}", loan);
 
         // @Todo : Add method findByUserIdOrMediaId, to check presence of user before insertion and return CONFLICT error status.
+        if (this.loanRepository.findByBorrowerIdAndMediaId(loan.getBorrowerId(), loan.getMediaId()) == null) {
+            logger.info("Loan already found on system");
+            return new ResponseEntity<Object>(HttpStatus.CONFLICT);
+        }
 
         HttpHeaders header = new HttpHeaders();
         this.loanRepository.save(loan);
@@ -133,16 +137,16 @@ public class LoanRestController {
     }
 
     /**
-     * Update the information about one precise loan.
+     * Update the information about one precise authenticate.
      *
      * @param id
-     *  Identifier of the loan.
+     *  Identifier of the authenticate.
      * @param updatedLoan
-     *  Information about the new loan information.
+     *  Information about the new authenticate information.
      * @param uriBuilder
-     *  Uri to redirect loan on user page update.
+     *  Uri to redirect authenticate on user page update.
      * @return
-     *  A ResponseEntity with loan and/or http code status about error during process.
+     *  A ResponseEntity with authenticate and/or http code status about error during process.
      * @since 1.0
      * @version 1.0
      */
@@ -150,7 +154,7 @@ public class LoanRestController {
     public ResponseEntity<?> update(@PathVariable("id") long id,
                                     @RequestBody Loan updatedLoan,
                                     UriComponentsBuilder uriBuilder) {
-        logger.info("Update loan {}", updatedLoan);
+        logger.info("Update authenticate {}", updatedLoan);
         Loan loanUpdated = this.loanRepository.findOne(id);
         if (loanUpdated == null) {
             logger.info("Loan with id {} not found on system", id);
@@ -176,12 +180,12 @@ public class LoanRestController {
     }
 
     /**
-     * Remove a precise loan with his identifier.
+     * Remove a precise authenticate with his identifier.
      *
      * @param id
-     *  Identifier of the loan to remove from system.
+     *  Identifier of the authenticate to remove from system.
      * @param uriBuilder
-     *  Uri to redirect loan to the page who contains all users.
+     *  Uri to redirect authenticate to the page who contains all users.
      * @return
      *  A ResponseEntity with http code status to indicate the result of the process.
      * @since 1.0
@@ -189,7 +193,7 @@ public class LoanRestController {
      */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") long id, UriComponentsBuilder uriBuilder) {
-        logger.info("Delete loan with id : {}", id);
+        logger.info("Delete authenticate with id : {}", id);
         Loan loanDeleted = this.loanRepository.findOne(id);
         if (loanDeleted == null) {
             logger.info("Loan with id {} not found", id);

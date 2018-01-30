@@ -30,10 +30,11 @@
 
     <!-- Module definition -->
     <modules>
-        <module>media-service</module>
-        <module>user-service</module>
-        <module>stock-service</module>
+        <module>authenticate-service</module>
         <module>loan-service</module>
+        <module>media-service</module>
+        <module>stock-service</module>
+        <module>user-service</module>
     </modules>
 
     <!-- Properties definitions -->
@@ -47,10 +48,10 @@
         <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 
-        <core.loan.version>1.0</core.loan.version>
-        <core.media.version>1.0</core.media.version>
-        <core.stock.version>1.0</core.stock.version>
-        <core.user.version>1.0</core.user.version>
+        <core.loan.version>1.1.1-SNAPSHOT</core.loan.version>
+        <core.media.version>1.1.1-SNAPSHOT</core.media.version>
+        <core.stock.version>1.1.1-SNAPSHOT</core.stock.version>
+        <core.user.version>1.1.1-SNAPSHOT</core.user.version>
     </properties>
 
     <!-- Dependencies -->
