@@ -18,7 +18,6 @@
 
 package fr.nicolasgille.medialibs.services.stock;
 
-import fr.nicolasgille.medialibs.core.media.MediaRepository;
 import fr.nicolasgille.medialibs.core.stock.Stock;
 import fr.nicolasgille.medialibs.core.stock.StockRepository;
 import org.slf4j.Logger;
@@ -55,8 +54,6 @@ public class StockRestController {
      */
     @Autowired
     private StockRepository stockRepository;
-    @Autowired
-    private MediaRepository mediaRepository;
 
 
     /**

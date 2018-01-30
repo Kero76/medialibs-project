@@ -16,26 +16,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.nicolasgille.medialibs.services.authenticate;
+package fr.nicolasgille.medialibs.services.media;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- *
- * @since MediaLibs Service 1.0
- * @version 1.0
- */
-@SpringBootApplication
-public class AuthenticateApplication {
-
-    /**
-     * Main app.
-     *
-     * @param args
-     * @since 1.0
-     */
-    public static void main(String[] args) {
-        SpringApplication.run(AuthenticateApplication.class, args);
-    }
+@Configuration
+@EnableAutoConfiguration
+@EntityScan(basePackages = {
+        "fr.nicolasgille.medialibs.core.media"
+})
+@EnableJpaRepositories(basePackages = {
+        "fr.nicolasgille.medialibs.core.media"
+})
+@EnableTransactionManagement
+public class RepositoryConfiguration {
 }

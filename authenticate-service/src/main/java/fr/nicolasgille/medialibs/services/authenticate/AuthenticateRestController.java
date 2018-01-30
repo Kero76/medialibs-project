@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.nicolasgille.medialibs.services.loan;
+package fr.nicolasgille.medialibs.services.authenticate;
 
 import fr.nicolasgille.medialibs.core.user.Role;
 import fr.nicolasgille.medialibs.core.user.User;
