@@ -30,10 +30,11 @@
 
     <!-- Module definition -->
     <modules>
-        <module>media-service</module>
-        <module>user-service</module>
-        <module>stock-service</module>
+        <module>authenticate-service</module>
         <module>loan-service</module>
+        <module>media-service</module>
+        <module>stock-service</module>
+        <module>user-service</module>
     </modules>
 
     <!-- Properties definitions -->
