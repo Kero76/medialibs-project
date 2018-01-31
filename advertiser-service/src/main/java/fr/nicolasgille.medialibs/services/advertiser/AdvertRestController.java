@@ -18,8 +18,8 @@
 
 package fr.nicolasgille.medialibs.services.advertiser;
 
-import fr.nicolasgille.medialibs.core.advertiser.Advert;
-import fr.nicolasgille.medialibs.core.advertiser.AdvertRepository;
+import fr.nicolasgille.medialibs.core.advert.Advert;
+import fr.nicolasgille.medialibs.core.advert.AdvertRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

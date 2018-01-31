@@ -48,6 +48,7 @@
         <assertj.version>3.9.0</assertj.version>
         <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+        <h2.version>1.4.196</h2.version>
 
         <core.advert.version>1.0-SNAPSHOT</core.advert.version>
         <core.loan.version>1.1.1-SNAPSHOT</core.loan.version>
@@ -62,6 +63,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
             <version>${springboot.version}</version>
         </dependency>
         <dependency>
@@ -102,6 +108,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connector-java.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Test API -->
