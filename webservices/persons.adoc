@@ -10,7 +10,7 @@
 
 ==== Présentation du service de gestion des acteurs
 .Service de gestion des acteurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -40,7 +40,7 @@
 
 ==== Présentation du service de gestion des auteurs
 .Service de gestion des auteurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -70,7 +70,7 @@
 
 ==== Présentation du service de gestion des directeurs
 .Service de gestion des directeurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -100,7 +100,7 @@
 
 ==== Présentation du service de gestion des illustrateurs
 .Service de gestion des illustrateurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -130,7 +130,7 @@
 
 ==== Présentation du service de gestion des producteurs
 .Service de gestion des producteurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -160,7 +160,7 @@
 
 ==== Présentation du service de gestion des chanteurs et groupes
 .Service de gestion des chanteurs et groupes
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL

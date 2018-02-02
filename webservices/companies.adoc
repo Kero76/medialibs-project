@@ -10,7 +10,7 @@
 
 ==== Présentation du service de gestion des Label Records
 .Service de gestion des labels records
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -40,7 +40,7 @@
 
 ==== Présentation du service de gestion des développeurs
 .Service de gestion des développeurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL
@@ -70,7 +70,7 @@
 
 ==== Présentation du service de gestion des éditeurs
 .Service de gestion des éditeurs
-[cols="1,2,1,4,4", width="100%", options="header"]
+[cols="2,2,2,3,3", width="100%", options="header"]
 |======================================
 ^| Méthode
 ^| URL

@@ -1,13 +1,15 @@
 :author: Nicolas GILLE
 :email: nic.gille@gmail.com
 :description: Présentation des technologies utilisés dans le projet
-:revdate: 03 janvier 2018
-:revnumber: 0.2
-:revremark: Ajout des technologies supplémentaires Git et AsciiDoctor
+:revdate: 23 janvier 2018
+:revnumber: 0.3
+:revremark: Ajout de la technologie ReactJS
 :lang: fr
 
 == Présentation des Techonologies du projet
+
 === Technologies liées au Backend
+
 ==== Le framework Spring-Boot
 Le framework Spring-Boot est un framework développé en **Java** et ayant pour but de
 simplifier la réalisation d'application web en Java. +
@@ -16,7 +18,7 @@ facilitant la mise en place et la configuration parfois complexe qu'imposé Spri
 En sus de ceci, Spring-Boot possède un ensemble de plugin supplémentaire ajoutant
 de nouvelle fonctionnalités au _core_ initial du projet.
 On retrouvera par exemple dans le projet un module de gestion de la sécurité, ou
-encore de la manipulation de données via la présence de JPA et Hibernate.
+encore de la manipulation de données via la présence de JPA et Hibernate. + 
 Vous trouverez plus d'information relative a Spring-Boot sur le site officiel : https://projects.spring.io/spring-boot/
 
 ==== La librairie nv-i18n
@@ -29,14 +31,23 @@ disponibles dans les films ou encore les jeux vidéos gérés par la Médiathèq
 Cette librairie est disponible via le lien suivant : https://github.com/TakahikoKawasaki/nv-i18n
 
 === Technologies liées au Frontend
-// Vide pour le moment.
+
+==== Le framework ReactJS
+ReactJS est un framework développé en **JavaScript** permettant la mise en place d'une
+interface utilisateur. Couplé a de nombreuses extensions, ReactJs permet la réalisation
+d'application web interactive utilisable facilement sur téléphone, tablette ou pc.
+L'un des nombreux avantages d'utiliser ReactJs est qu'il est l'un des frameworks Front
+les plus utilisés à l'heure actuel dans le monde professionnel, et représente donc
+le framework le plus à même de me servir dans mon futur professionel.+
+Vous trouverez davantage d'information relative a ReactJs ici : https://reactjs.org/
 
 === Technologies liées aux Tests
+
 ==== Le framework JUnit5
 JUnit est un framework de **test unitaire** pour le langage Java.
 Il est utilisé afin de tester de manière unitaire l'ensembles des services et classes
 développés dans le cadre du projet, afin de valider leurs bon fonctionnement avant
-la mise en production de ces éléments. +
+la mise en production de ces éléments.
 Vous trouverez plus d'information sur ce framework a l'adresse suivante : http://junit.org/junit5/
 
 ==== Le framework AssertJ
@@ -53,6 +64,7 @@ tests unitaires par une personne ayant une connaissance moins étendu du Java. +
 Cette librairie est disponible via le lien suivant : https://github.com/gabriel-deliu/given-when-then
 
 === Technologies supplémentaires
+
 ==== Le logiciel de versionning Git
 **Git** est un logiciel de versionning de code source.
 Il est utilisé dans le cadre du projet afin de pouvoir gérer plus facilement l'ensemble du code.

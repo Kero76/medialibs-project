@@ -1,0 +1,462 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Présentation des web service relatifs aux médias
+:revdate: 23 janvier 2018
+:revnumber: 0.1
+:revremark: Création du fichier + présentation des services de gestions de l'ensembles des médias.
+:lang: fr
+
+=== Présentation des services de gestion des médias
+
+==== Service de gestions des Livres
+.Service de gestion des livres
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /books/
+| /
+| Récupération de l'ensemble des livres présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de livres présent dans la médiathèque.
+
+| GET
+| /books/{id}
+| /
+| Récupération des informations d'un livre en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de livre ayant pour identifiant _id_.
+
+| GET
+| /books/title/{title}
+| /
+| Récupération des informations d'un livre en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de livre ayant pour titre _title_.
+
+| POST
+| /books/
+| Book
+| Ajout d'un nouveau livre dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout du livre dans la médiathèque.
+
+| PUT
+| /books/{id}
+| Book
+| Modification des information d'un livre possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le livre a modifier n'existe pas.
+
+| DELETE
+| /books/{id}
+| Book
+| Suppression du livre ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le livre a supprimer n'existe pas.
+
+| GET
+| /books/genres/
+| /
+| Retourne la liste de tout les genres de livres disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+
+| GET
+| /books/formats/
+| /
+| Retourne la liste de tout les formats de livres disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Bandes Dessinées / Comics / Mangas
+.Service de gestion des bandes dessinées, comics et mangas
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /comics/
+| /
+| Récupération de l'ensemble des bandes dessinées, comics et mangas présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de bande dessinés, comics ou mangas présent dans la médiathèque.
+
+| GET
+| /comics/{id}
+| /
+| Récupération des informations d'une bandes dessinées, comics ou mangas en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de bande dessinée, comic ou manga ayant pour identifiant _id_.
+
+| GET
+| /comics/title/{title}
+| /
+| Récupération des informations d'une bande dessinée, comic ou manga en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de bande dessinée, comic ou manga ayant pour titre _title_.
+
+| POST
+| /comics/
+| Comic
+| Ajout d'une nouvelle bande dessinée, comic ou manga dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout de la bande dessiné, du comic ou du manga dans la médiathèque.
+
+| PUT
+| /comics/{id}
+| Comic
+| Modification des information de la bande dessinée, comic ou manga possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si la bande dessiné, du comic ou du manga a mettre à jour n'existe pas.
+
+| DELETE
+| /comics/{id}
+| Comic
+| Suppression de la bande dessinée, comic ou manga ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si la bande dessinée, le comic ou le manga a supprimer n'existe pas.
+
+| GET
+| /comics/genres/
+| /
+| Retourne la liste de tout les genres de bandes dessinées, comics ou mangas disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+
+| GET
+| /comics/formats/
+| /
+| Retourne la liste de tout les formats de bandes dessinées, comics ou mangas disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Service liés aux Jeux Vidéos
+.Service de gestion des jeux vidéos
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /video-games/
+| /
+| Récupération de l'ensemble des jeux vidéos présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de jeux vidéos présent dans la médiathèque.
+
+| GET
+| /video-games/{id}
+| /
+| Récupération des informations d'un jeu vidéo en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de jeu vidéo ayant pour identifiant _id_.
+
+| GET
+| /video-games/title/{title}
+| /
+| Récupération des informations d'un jeu vidéo en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de jeu vidéo ayant pour titre _title_.
+
+| POST
+| /video-games/
+| VideoGame
+| Ajout d'un nouveau jeu vidéo dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout du jeu vidéo dans la médiathèque.
+
+| PUT
+| /video-games/{id}
+| VideoGame
+| Modification des information d'un jeu vidéo possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le jeu vidéo a mettre à jour n'existe pas.
+
+| DELETE
+| /video-games/{id}
+| VideoGame | Suppression du jeu vidéo ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le jeu vidéo a supprimer n'existe pas.
+
+| GET
+| /video-games/genres/
+| /
+| Retourne la liste de tout les genres de jeux vidéos disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+
+| GET
+| /video-games/platforms/
+| /
+| Retourne la liste de toutes les plates-formes de jeux vidéos disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Albums musicaux
+.Service de gestion des albums de musique
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /musics/
+| /
+| Récupération de l'ensemble des albums de musique présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'albums de musiques présent dans la médiathèque.
+
+| GET
+| /musics/{id}
+| /
+| Récupération des informations d'un album de musique en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'album ayant pour identifiant _id_.
+
+| GET
+| /musics/title/{title}
+| /
+| Récupération des informations d'un album de musique en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'album ayant pour titre _title_.
+
+| POST
+| /musics/
+| Album
+| Ajout d'un nouvel album de musique dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout d'un nouvel album dans la médiathèque.
+
+| PUT
+| /musics/{id}
+| Album
+| Modification des information d'un album de musique possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si l'album a mettre à jour n'existe pas.
+
+| DELETE
+| /musics/{id}
+| Album
+| Suppression de l'album de musique ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si l'album a supprimer n'existe pas.
+
+| GET
+| /musics/genres/
+| /
+| Retourne la liste de tout les genres musical disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Dessins Animés
+.Service de gestion des dessins animés
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /cartoons/
+| /
+| Récupération de l'ensemble des dessins animés présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de dessin animés présent dans la médiathèque.
+
+| GET
+| /cartoons/{id}
+| /
+| Récupération des informations d'un dessin animé en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de dessin animé ayant pour identifiant _id_.
+
+| GET
+| /cartoons/title/{title}
+| /
+| Récupération des informations d'un dessin animé en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de dessin animé ayant pour titre _title_.
+
+| POST
+| /cartoons/
+| Cartoon
+| Ajout d'un nouveau dessin animé dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout du dessin animé dans la médiathèque.
+
+| PUT
+| /cartoons/{id}
+| Cartoon
+| Modification des information d'un dessin animé possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le dessin animé a mettre à jour n'existe pas.
+
+| DELETE
+| /cartoons/{id}
+| Cartoon
+| Suppression du dessin animé ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le dessin animé a supprimer n'existe pas.
+
+| GET
+| /cartoons/genres/
+| /
+| Retourne la liste de tout les genres de dessins animés disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Films
+.Service de gestion des films
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /movies/
+| /
+| Récupération de l'ensemble des films présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de films présent dans la médiathèque.
+
+| GET
+| /movies/{id}
+| /
+| Récupération des informations d'un film en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de film ayant pour identifiant _id_.
+
+| GET
+| /movies/title/{title}
+| /
+| Récupération des informations d'un film en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de film ayant pour titre _title_.
+
+| POST
+| /movies/
+| Movie
+| Ajout d'un nouveau film dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout du film dans la médiathèque.
+
+| PUT
+| /movies/{id}
+| Movie
+| Modification des information d'un film possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le film a mettre à jour n'existe pas
+
+| DELETE
+| /movies/{id}
+| Movie
+| Suppression du film ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si le film a supprimer n'existe pas.
+
+| GET
+| /movies/genres/
+| /
+| Retourne la liste de tout les genres de films disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Japanimes
+.Service de gestion des japanimes
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /animes/
+| /
+| Récupération de l'ensemble des animes présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'anime présent dans la médiathèque.
+
+| GET
+| /animes/{id}
+| /
+| Récupération des informations d'un anime en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'anime ayant pour identifiant _id_.
+
+| GET
+| /animes/title/{title}
+| /
+| Récupération des informations d'un anime en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'anime ayant pour titre _title_.
+
+| GET
+| /animes/title/{title}/{currentSeason}
+| /
+| Récupération des informations d'un anime en fonction de son _titre_ et de sa _saison actuelle_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence d'anime ayant pour titre _title_ et pour saison actuelle _currentSeason_.
+
+| POST
+| /animes/
+| Anime
+| Ajout d'un nouvel anime dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout du nouvel anime dans la médiathèque.
+
+| PUT
+| /animes/{id}
+| Anime
+| Modification des information d'un anime possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si l'anime a mettre à jour n'existe pas
+
+| DELETE
+| /animes/{id}
+| Anime
+| Suppression de l'anime ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si l'anime a supprimer n'existe pas.
+
+| GET
+| /animes/genres/
+| /
+| Retourne la liste de tout les genres d'animes disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================
+
+==== Services de gestions des Séries
+.Service de gestion des séries
+[cols="2,2,2,3,3", width="100%", options="header"]
+|=================================
+^| Méthode
+^| URL
+^| Body
+^| Description
+^| Code de retour
+
+| GET
+| /series/
+| /
+| Récupération de l'ensemble des séries présent dans la médiathèque.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de séries présent dans la médiathèque.
+
+| GET
+| /series/{id}
+| /
+| Récupération des informations d'une série en fonction de son _id_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de série ayant pour identifiant _id_.
+
+| GET
+| /series/title/{title}
+| /
+| Récupération des informations d'une série en fonction de son _titre_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de série ayant pour titre _title_.
+
+| GET
+| /series/title/{title}/{currentSeason}
+| /
+| Récupération des informations d'une série en fonction de son _titre_ et de sa _saison actuelle_.
+| _200_ en cas de succès de la requête. _204_ en cas d'absence de série ayant pour titre _title_ et pour saison actuelle _currentSeason_.
+
+| POST
+| /series/
+| Series
+| Ajout d'une nouvelle série dans la médiathèque.
+| _201_ en cas de succès de la requête. _409_ en cas d'échec de l'ajout de la série dans la médiathèque.
+
+| PUT
+| /series/{id}
+| Series
+| Modification des information d'une série possèdant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si la série a mettre à jour n'existe pas
+
+| DELETE
+| /series/{id}
+| Series
+| Suppression de la série ayant l'identifiant _id_.
+| _200_ en cas de succès de la requête. _204_ si la série a supprimer n'existe pas.
+
+| GET
+| /series/genres/
+| /
+| Retourne la liste de tout les genres de série disponible dans la médiathèque.
+| Renvoie toujours un code _200_.
+|=================================

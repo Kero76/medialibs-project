@@ -1,0 +1,37 @@
+:author: Nicolas GILLE
+:email: nic.gille@gmail.com
+:description: Architecture du projet MediaLibs
+:revdate: 23 janvier 2018
+:revnumber: 0.21
+:revremark: Création du fichier
+:lang: fr
+
+== Architectures
+
+source
+.Diagramme UML des objets présent dans la Médiathèque
+[plantuml, diagram-classes, png]
+....
+interface IMedia
+class Media
+class Book
+class Comic
+class VideoGame
+class Album
+class Anime
+class Cartoon
+class Movie
+class Series
+class Video
+
+IMedia <|.. Media
+Media <|-- Video
+Media <|-- Book
+Media <|-- Comic
+Media <|-- VideoGame
+Media <|-- Album
+Video <|-- Anime
+Video <|-- Cartoon
+Video <|-- Movie
+Video <|-- Series
+....
